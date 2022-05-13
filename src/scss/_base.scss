@@ -7,6 +7,8 @@
 body {
     font-size: 12px;
     font-family: $family;
+    height: 100vh;
+    background-image: $bg-gradient;
 }
 
 h1 {
@@ -24,6 +26,8 @@ p {
 }
 
 main {
-    height: 100vh;
-    background-image: $bg-gradient;
-}
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    }

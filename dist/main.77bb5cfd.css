@@ -9,6 +9,8 @@
 body {
   font-size: 12px;
   font-family: "Kumbh Sans";
+  height: 100vh;
+  background-image: linear-gradient(hsl(273deg, 75%, 66%), hsl(240deg, 73%, 65%));
 }
 
 h1 {
@@ -26,8 +28,10 @@ p {
 }
 
 main {
-  height: 100vh;
-  background-image: linear-gradient(hsl(273deg, 75%, 66%), hsl(240deg, 73%, 65%));
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .container {
