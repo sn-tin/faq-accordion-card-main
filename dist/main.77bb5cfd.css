@@ -132,7 +132,6 @@ main {
   content: url("/icon-arrow-down.374cd0ea.svg");
   float: right;
   transform: scale(1.5);
-  transition: 0.2s;
 }
 
 .title-questions:hover {
@@ -156,13 +155,17 @@ main {
   width: 95%;
 }
 
-.arrow-up::after {
-  content: url("/icon-arrow-down.374cd0ea.svg");
-  transform: rotate(180deg), scale(1.5);
-}
-
 .arrow-clicked {
   transition: all 0.2s ease-in;
+}
+
+.bold-questions {
+  font-weight: 700;
+}
+
+.arrow-clicked::after {
+  content: url("/icon-arrow-down.374cd0ea.svg");
+  transform: rotate(180deg), scale(1.5);
 }
 
 .show-answer {

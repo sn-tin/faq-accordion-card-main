@@ -5,6 +5,7 @@ let arrayOfQuestions = [...clickTitleQuestions];
 arrayOfQuestions.forEach(questions => {
     questions.addEventListener("click", function(){
         this.classList.toggle("arrow-clicked");
+        this.classList.toggle("bold-questions");
         
         let moveBoxIllust = document.querySelector(".box-illust");
 
@@ -12,6 +13,7 @@ arrayOfQuestions.forEach(questions => {
             moveBoxIllust.style.left = "-10rem";
         } else {
             moveBoxIllust.style.left = "-7rem";
+            this.classList.remove("bold-questions");
         }
 
         let answer1 = document.querySelector(".answer-1");

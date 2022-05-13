@@ -138,12 +138,14 @@ var arrayOfQuestions = _toConsumableArray(clickTitleQuestions);
 arrayOfQuestions.forEach(function (questions) {
   questions.addEventListener("click", function () {
     this.classList.toggle("arrow-clicked");
+    this.classList.toggle("bold-questions");
     var moveBoxIllust = document.querySelector(".box-illust");
 
     if (this.classList.contains("arrow-clicked")) {
       moveBoxIllust.style.left = "-10rem";
     } else {
       moveBoxIllust.style.left = "-7rem";
+      this.classList.remove("bold-questions");
     }
 
     var answer1 = document.querySelector(".answer-1");
@@ -213,7 +215,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "46345" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "36127" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
