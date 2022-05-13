@@ -8,14 +8,25 @@
 }
 
 .title-questions {
-    justify-content: space-between;
-    align-items: center;
+    width: 100%;
+    font-size: $questions-size;
+    border: 0;
+    background-color: transparent;
+    text-align: left;
     margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.title-questions::after {
+    content: url("../images/icon-arrow-down.svg");
+    float: right;
+    transform: scale(1.5);
 }
 
 .arrow-down {
     width: 15px;
     cursor: pointer;
+    transition: all 0.2s ease-in;
 }
 
 .questions:hover {

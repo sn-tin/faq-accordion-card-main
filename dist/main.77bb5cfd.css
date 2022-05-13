@@ -118,14 +118,25 @@ main {
 }
 
 .title-questions {
-  justify-content: space-between;
-  align-items: center;
+  width: 100%;
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  border: 0;
+  background-color: transparent;
+  text-align: left;
   margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.title-questions::after {
+  content: url("/icon-arrow-down.374cd0ea.svg");
+  float: right;
+  transform: scale(1.5);
 }
 
 .arrow-down {
   width: 15px;
   cursor: pointer;
+  transition: all 0.2s ease-in;
 }
 
 .questions:hover {
