@@ -11,6 +11,7 @@ body {
   font-family: "Kumbh Sans";
   height: 100vh;
   background-image: linear-gradient(hsl(273deg, 75%, 66%), hsl(240deg, 73%, 65%));
+  background-repeat: no-repeat;
 }
 
 h1 {
@@ -28,10 +29,10 @@ p {
 }
 
 main {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .container {
@@ -85,6 +86,10 @@ main {
   padding: 100px 100px 100px 0;
 }
 
+.faq-heading {
+  margin-bottom: 30px;
+}
+
 .title-questions {
   justify-content: space-between;
   align-items: center;
@@ -107,7 +112,12 @@ main {
 
 .answer-1, .answer-3, .answer-4, .answer-5 {
   display: none;
+  width: 95%;
   margin-bottom: 30px;
+}
+
+.answer-2 {
+  width: 95%;
 }
 
 .arrow-clicked {
