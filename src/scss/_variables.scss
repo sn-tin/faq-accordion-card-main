@@ -1,0 +1,16 @@
+/* Font Styles */
+$family: 'Kumbh Sans';
+$regular: 400;
+$bold: 700;
+// $body-font-size: clamp(0.625rem, 2.5vw, 0.75rem);
+$big-heading-size: clamp(2.3rem, 2.5vw, 2.5rem);
+$questions-size: clamp(1.2rem, 2.5vw, 1.4rem);
+$answers-size: clamp(1rem, 2.5vw, 1.2rem);
+
+/* Colors */
+$bg-gradient: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+$orange-hover-text: hsl(14, 88%, 65%);
+$bold-text-color: hsl(238, 29%, 16%);
+$questions-color: hsl(237, 12%, 33%);
+$answers-color: hsl(240, 6%, 50%);
+$border-color: hsl(240, 5%, 91%);

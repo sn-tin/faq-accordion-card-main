@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 12px;
+    font-family: $family;
+}
+
+h1 {
+    font-size: $big-heading-size;
+    font-weight: $bold;
+}
+
+h2 {
+    font-size: $questions-size;
+    margin: 0;
+}
+
+p {
+    font-size: $answers-size;
+}
+
+main {
+    height: 100vh;
+    background-image: $bg-gradient;
+}
