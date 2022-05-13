@@ -1,0 +1,1 @@
+let questionsArrow = document.querySelectorAll(".faqs")

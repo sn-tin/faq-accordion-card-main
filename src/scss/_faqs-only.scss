@@ -28,12 +28,14 @@
 }
 
 .answer-1, .answer-3, .answer-4, .answer-5 {
+    color: $answers-color;
     display: none;
     width: 95%;
     margin-bottom: 30px;
 }
 
 .answer-2 {
+    color: $answers-color;
     width: 95%;
 }
 
@@ -44,8 +46,13 @@
     transition: all 0.2s ease-in;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 900px) {
     .faq-side {
-        padding: 20px;
+        padding: 25px 25px 50px;
+        margin-top: 120px;
+    }
+
+    .faq-heading {
+        text-align: center;
     }
 }

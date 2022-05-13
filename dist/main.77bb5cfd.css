@@ -9,7 +9,7 @@
 body {
   font-size: 12px;
   font-family: "Kumbh Sans";
-  height: 100vh;
+  height: 100%;
   background-image: linear-gradient(hsl(273deg, 75%, 66%), hsl(240deg, 73%, 65%));
   background-repeat: no-repeat;
 }
@@ -20,32 +20,41 @@ h1 {
 }
 
 h2 {
-  font-size: clamp(1.2rem, 2.5vw, 1.4rem);
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
   margin: 0;
 }
 
 p {
-  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  font-size: clamp(0.9rem, 2.5vw, 1.2rem);
 }
 
 main {
   height: 100vh;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+@media screen and (max-width: 900px) {
+  main {
+    margin: 30% auto 5%;
+  }
+}
 .container {
   align-items: center;
   justify-content: center;
   background-color: white;
   border-radius: 20px;
-  gap: 20px;
   padding: 0;
   background-image: url("/bg-pattern-desktop.2f784f63.svg");
   background-repeat: no-repeat;
   background-size: 80rem;
   background-position: -50rem -25rem;
+}
+
+.image-side {
+  position: relative;
 }
 
 .desktop-img {
@@ -62,23 +71,41 @@ main {
 }
 
 .box-illust {
-  overflow: visible;
+  width: 14rem;
   position: absolute;
-  top: 19rem;
-  left: 16.5rem;
+  top: 11.5rem;
+  left: -7rem;
 }
 
 .mobile-img {
   display: none;
 }
 
-@media screen and (max-width: 400px) {
-  .desktop-img {
+@media screen and (max-width: 900px) {
+  .container {
+    background-image: url("/bg-pattern-mobile.0fb10e67.svg");
+    background-size: 70%;
+    background-position: top center;
+    transform: scale(0.9);
+  }
+
+  .desktop-img, .desktop-illust, .box-illust {
     display: none;
+    position: static;
+  }
+
+  .image-side {
+    width: 100%;
   }
 
   .mobile-img {
     display: block;
+    width: 70%;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -60%);
   }
 }
 .faq-side {
@@ -111,12 +138,14 @@ main {
 }
 
 .answer-1, .answer-3, .answer-4, .answer-5 {
+  color: hsl(240deg, 6%, 50%);
   display: none;
   width: 95%;
   margin-bottom: 30px;
 }
 
 .answer-2 {
+  color: hsl(240deg, 6%, 50%);
   width: 95%;
 }
 
@@ -125,9 +154,14 @@ main {
   transition: all 0.2s ease-in;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 900px) {
   .faq-side {
-    padding: 20px;
+    padding: 25px 25px 50px;
+    margin-top: 120px;
+  }
+
+  .faq-heading {
+    text-align: center;
   }
 }
 
