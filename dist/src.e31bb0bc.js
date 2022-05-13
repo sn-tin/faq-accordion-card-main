@@ -118,27 +118,73 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"index.js":[function(require,module,exports) {
-// let faq1 = document.querySelector("faq-1");
-// let faq2 = document.querySelector("faq-2");
-// let faq3 = document.querySelector("faq-3");
-// let faq4 = document.querySelector("faq-4");
-// let faq5 = document.querySelector("faq-5");
-// let questionsArrow = [faq1, faq2, faq3, faq4, faq5];
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 var clickTitleQuestions = document.querySelectorAll(".title-questions");
 var questionsArrow = document.querySelectorAll(".arrow-down");
 
-for (var i = 0; i <= clickTitleQuestions.length; i++) {
-  clickTitleQuestions[i].addEventListener("click", function () {
-    questionsArrow.classList.toggle("arrow-clicked");
-  });
-  var panel = this.nextElementSibling;
+var arrayOfQuestions = _toConsumableArray(clickTitleQuestions);
 
-  if (panel.style.display === "block") {
-    panel.style.display = "none";
-  } else {
-    panel.style.display = "block";
-  }
-}
+arrayOfQuestions.forEach(function (questions) {
+  questions.addEventListener("click", function () {
+    this.classList.toggle("arrow-clicked");
+    var moveBoxIllust = document.querySelector(".box-illust");
+
+    if (this.classList.contains("arrow-clicked")) {
+      moveBoxIllust.style.left = "-10rem";
+    } else {
+      moveBoxIllust.style.left = "-7rem";
+    }
+
+    var answer1 = document.querySelector(".answer-1");
+    var answer2 = document.querySelector(".answer-2");
+    var answer3 = document.querySelector(".answer-3");
+    var answer4 = document.querySelector(".answer-4");
+    var answer5 = document.querySelector(".answer-5");
+
+    if (this.classList.contains("q-1")) {
+      answer1.classList.toggle("show-answer");
+      answer2.classList.remove("show-answer");
+      answer3.classList.remove("show-answer");
+      answer4.classList.remove("show-answer");
+      answer5.classList.remove("show-answer");
+    } else if (this.classList.contains("q-2")) {
+      answer1.classList.remove("show-answer");
+      answer2.classList.toggle("show-answer");
+      answer3.classList.remove("show-answer");
+      answer4.classList.remove("show-answer");
+      answer5.classList.remove("show-answer");
+    } else if (this.classList.contains("q-3")) {
+      answer1.classList.remove("show-answer");
+      answer2.classList.remove("show-answer");
+      answer3.classList.toggle("show-answer");
+      answer4.classList.remove("show-answer");
+      answer5.classList.remove("show-answer");
+    } else if (this.classList.contains("q-4")) {
+      answer1.classList.remove("show-answer");
+      answer2.classList.remove("show-answer");
+      answer3.classList.remove("show-answer");
+      answer4.classList.toggle("show-answer");
+      answer5.classList.remove("show-answer");
+    } else if (this.classList.contains("q-5")) {
+      answer1.classList.remove("show-answer");
+      answer2.classList.remove("show-answer");
+      answer3.classList.remove("show-answer");
+      answer4.classList.remove("show-answer");
+      answer5.classList.toggle("show-answer");
+    }
+  });
+});
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -167,7 +213,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44139" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "46345" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

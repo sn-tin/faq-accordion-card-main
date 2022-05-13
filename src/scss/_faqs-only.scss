@@ -18,18 +18,14 @@
 }
 
 .title-questions::after {
+    display: inline;
     content: url("../images/icon-arrow-down.svg");
     float: right;
     transform: scale(1.5);
+    transition: 0.2s;
 }
 
-.arrow-down {
-    width: 15px;
-    cursor: pointer;
-    transition: all 0.2s ease-in;
-}
-
-.questions:hover {
+.title-questions:hover {
     color: $orange-hover-text;
 }
 
@@ -38,7 +34,7 @@
     margin-top: 20px;
 }
 
-.answer-1, .answer-3, .answer-4, .answer-5 {
+.answers {
     color: $answers-color;
     display: none;
     width: 95%;
@@ -50,11 +46,24 @@
     width: 95%;
 }
 
+.arrow-up::after{
+    content: url("../images/icon-arrow-down.svg");
+    transform: rotate(180deg), scale(1.5);
+}
+
 // To add by JavaScript
 
 .arrow-clicked {
-    transform: rotate(180deg);
     transition: all 0.2s ease-in;
+}
+
+.show-answer {
+    display: block;
+}
+
+.arrow-clicked::after {
+    content: url("../images/icon-arrow-down.svg");
+    transform: rotate(-180deg) scale(1.5);
 }
 
 @media screen and (max-width: 900px) {

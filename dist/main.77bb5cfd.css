@@ -128,18 +128,14 @@ main {
 }
 
 .title-questions::after {
+  display: inline;
   content: url("/icon-arrow-down.374cd0ea.svg");
   float: right;
   transform: scale(1.5);
+  transition: 0.2s;
 }
 
-.arrow-down {
-  width: 15px;
-  cursor: pointer;
-  transition: all 0.2s ease-in;
-}
-
-.questions:hover {
+.title-questions:hover {
   color: hsl(14deg, 88%, 65%);
 }
 
@@ -148,7 +144,7 @@ main {
   margin-top: 20px;
 }
 
-.answer-1, .answer-3, .answer-4, .answer-5 {
+.answers {
   color: hsl(240deg, 6%, 50%);
   display: none;
   width: 95%;
@@ -160,9 +156,22 @@ main {
   width: 95%;
 }
 
+.arrow-up::after {
+  content: url("/icon-arrow-down.374cd0ea.svg");
+  transform: rotate(180deg), scale(1.5);
+}
+
 .arrow-clicked {
-  transform: rotate(180deg);
   transition: all 0.2s ease-in;
+}
+
+.show-answer {
+  display: block;
+}
+
+.arrow-clicked::after {
+  content: url("/icon-arrow-down.374cd0ea.svg");
+  transform: rotate(-180deg) scale(1.5);
 }
 
 @media screen and (max-width: 900px) {
