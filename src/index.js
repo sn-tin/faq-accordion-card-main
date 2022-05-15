@@ -1,15 +1,13 @@
 const clickTitleQuestions = document.querySelectorAll(".title-questions");
 const questionsArrow = document.querySelectorAll(".arrow-down");
-let arrayOfQuestions = [...clickTitleQuestions];
 
-arrayOfQuestions.forEach(questions => {
-    questions.addEventListener("click", function(){
-        this.classList.toggle("arrow-clicked");
-        this.classList.toggle("bold-questions");
+clickTitleQuestions.forEach(questions => {
+    questions.addEventListener("click", function() {
+        this.classList.toggle("active");
         
         let moveBoxIllust = document.querySelector(".box-illust");
 
-        if(this.classList.contains("arrow-clicked")){
+        if(this.classList.contains("active")){
             moveBoxIllust.style.left = "-10rem";
         } else {
             moveBoxIllust.style.left = "-7rem";

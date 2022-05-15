@@ -118,30 +118,14 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"index.js":[function(require,module,exports) {
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
-
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
-
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
 var clickTitleQuestions = document.querySelectorAll(".title-questions");
 var questionsArrow = document.querySelectorAll(".arrow-down");
-
-var arrayOfQuestions = _toConsumableArray(clickTitleQuestions);
-
-arrayOfQuestions.forEach(function (questions) {
+clickTitleQuestions.forEach(function (questions) {
   questions.addEventListener("click", function () {
-    this.classList.toggle("arrow-clicked");
-    this.classList.toggle("bold-questions");
+    this.classList.toggle("active");
     var moveBoxIllust = document.querySelector(".box-illust");
 
-    if (this.classList.contains("arrow-clicked")) {
+    if (this.classList.contains("active")) {
       moveBoxIllust.style.left = "-10rem";
     } else {
       moveBoxIllust.style.left = "-7rem";
@@ -215,7 +199,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34263" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38221" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

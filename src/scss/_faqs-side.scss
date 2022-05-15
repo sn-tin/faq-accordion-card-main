@@ -10,6 +10,7 @@
 .title-questions {
     width: 100%;
     font-size: $questions-size;
+    color: $bold-text-color;
     border: 0;
     background-color: transparent;
     text-align: left;
@@ -47,17 +48,13 @@
 
 // To add by JavaScript
 
-.arrow-clicked {
+.active {
     transition: all 0.2s ease-in;
 }
 
-.arrow-clicked::after {
+.active::after {
     content: url("../images/icon-arrow-down.svg");
     transform: rotate(-180deg) scale(1.5);
-}
-
-.bold-questions {
-    font-weight: $bold;
 }
 
 .show-answer {
