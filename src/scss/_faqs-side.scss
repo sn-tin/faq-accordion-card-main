@@ -7,7 +7,7 @@
     margin-bottom: 30px;
 }
 
-.title-questions {
+.questions {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -25,7 +25,7 @@
     width: 15px;
 }
 
-.title-questions:hover {
+.questions:hover {
     color: $orange-hover-text;
 }
 
@@ -41,11 +41,6 @@
     margin-bottom: 30px;
 }
 
-// .answer-2 {
-//     color: $answers-color;
-//     width: 95%;
-// }
-
 // To add by JavaScript
 
 .active {
@@ -60,11 +55,6 @@
     transform: rotate(180deg);
     transition: all 0.2s ease-in;
 }
-
-// .active::after {
-//     content: url("../images/icon-arrow-down.svg");
-//     transform: rotate(-180deg) scale(1.5);
-// }
 
 @media screen and (max-width: 900px) {
     .faq-side {

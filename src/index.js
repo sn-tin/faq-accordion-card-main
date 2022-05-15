@@ -1,4 +1,4 @@
-const clickTitleQuestions = document.querySelectorAll(".title-questions");
+const clickTitleQuestions = document.querySelectorAll(".questions");
 const moveBoxIllust = document.querySelector(".box-illust");
 
 clickTitleQuestions.forEach(questions => {
