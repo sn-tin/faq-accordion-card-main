@@ -42,6 +42,7 @@ main {
   background-color: white;
   border-radius: 20px;
   padding: 0;
+  margin: 0 100px;
   background-image: url("/bg-pattern-desktop.2f784f63.svg");
   background-repeat: no-repeat;
   background-size: 80rem;
