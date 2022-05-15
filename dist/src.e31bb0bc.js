@@ -122,6 +122,7 @@ var accordionQuestions = document.querySelectorAll(".questions");
 var boxIllustration = document.querySelector(".box-illust");
 accordionQuestions.forEach(function (questions) {
   questions.addEventListener('click', function () {
+    // accordionQuestions.forEach(itm => itm.classList.remove("active"));
     this.classList.toggle("active");
     var accordionAnswers = questions.nextElementSibling;
 
@@ -162,7 +163,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "45415" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34131" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
