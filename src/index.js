@@ -1,15 +1,19 @@
-const clickTitleQuestions = document.querySelectorAll(".questions");
-const moveBoxIllust = document.querySelector(".box-illust");
+// Get each questions
 
-clickTitleQuestions.forEach(questions => {
-    questions.addEventListener("click", function() {
+const accordionQuestions = document.querySelectorAll(".questions");
+
+accordionQuestions.forEach(questions => {
+    questions.addEventListener('click', function() {
         this.classList.toggle("active");
 
-        if(this.classList.contains("active")){
-            moveBoxIllust.style.left = "-10rem";
-        } else {
-            moveBoxIllust.style.left = "-7rem";
-        }
+        const accordionAnswers = questions.nextElementSibling;
 
+        if (questions.classList.contains("active")) {
+            accordionAnswers.classList.toggle("collapse-answer")
+        } else {
+            accordionAnswers.classList.remove("collapse-answer")
+        }
     })
 })
+
+//
