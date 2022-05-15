@@ -118,6 +118,9 @@ main {
 }
 
 .title-questions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
   font-size: clamp(1rem, 2.5vw, 1.4rem);
   color: hsl(238deg, 29%, 16%);
@@ -128,11 +131,8 @@ main {
   cursor: pointer;
 }
 
-.title-questions::after {
-  display: inline;
-  content: url("/icon-arrow-down.374cd0ea.svg");
-  float: right;
-  transform: scale(1.5);
+.arrow-down {
+  width: 15px;
 }
 
 .title-questions:hover {
@@ -151,22 +151,17 @@ main {
   margin-bottom: 30px;
 }
 
-.answer-2 {
-  color: hsl(240deg, 6%, 50%);
-  width: 95%;
-}
-
 .active {
-  transition: all 0.2s ease-in;
+  font-weight: 700;
 }
 
-.active::after {
-  content: url("/icon-arrow-down.374cd0ea.svg");
-  transform: rotate(-180deg) scale(1.5);
-}
-
-.show-answer {
+.active > .answers {
   display: block;
+}
+
+.active img {
+  transform: rotate(180deg);
+  transition: all 0.2s ease-in;
 }
 
 @media screen and (max-width: 900px) {

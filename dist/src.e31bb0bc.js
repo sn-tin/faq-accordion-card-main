@@ -119,55 +119,15 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"index.js":[function(require,module,exports) {
 var clickTitleQuestions = document.querySelectorAll(".title-questions");
-var questionsArrow = document.querySelectorAll(".arrow-down");
+var moveBoxIllust = document.querySelector(".box-illust");
 clickTitleQuestions.forEach(function (questions) {
   questions.addEventListener("click", function () {
     this.classList.toggle("active");
-    var moveBoxIllust = document.querySelector(".box-illust");
 
     if (this.classList.contains("active")) {
       moveBoxIllust.style.left = "-10rem";
     } else {
       moveBoxIllust.style.left = "-7rem";
-      this.classList.remove("bold-questions");
-    }
-
-    var answer1 = document.querySelector(".answer-1");
-    var answer2 = document.querySelector(".answer-2");
-    var answer3 = document.querySelector(".answer-3");
-    var answer4 = document.querySelector(".answer-4");
-    var answer5 = document.querySelector(".answer-5");
-
-    if (this.classList.contains("q-1")) {
-      answer1.classList.toggle("show-answer");
-      answer2.classList.remove("show-answer");
-      answer3.classList.remove("show-answer");
-      answer4.classList.remove("show-answer");
-      answer5.classList.remove("show-answer");
-    } else if (this.classList.contains("q-2")) {
-      answer1.classList.remove("show-answer");
-      answer2.classList.toggle("show-answer");
-      answer3.classList.remove("show-answer");
-      answer4.classList.remove("show-answer");
-      answer5.classList.remove("show-answer");
-    } else if (this.classList.contains("q-3")) {
-      answer1.classList.remove("show-answer");
-      answer2.classList.remove("show-answer");
-      answer3.classList.toggle("show-answer");
-      answer4.classList.remove("show-answer");
-      answer5.classList.remove("show-answer");
-    } else if (this.classList.contains("q-4")) {
-      answer1.classList.remove("show-answer");
-      answer2.classList.remove("show-answer");
-      answer3.classList.remove("show-answer");
-      answer4.classList.toggle("show-answer");
-      answer5.classList.remove("show-answer");
-    } else if (this.classList.contains("q-5")) {
-      answer1.classList.remove("show-answer");
-      answer2.classList.remove("show-answer");
-      answer3.classList.remove("show-answer");
-      answer4.classList.remove("show-answer");
-      answer5.classList.toggle("show-answer");
     }
   });
 });
@@ -199,7 +159,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38221" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "42257" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -8,6 +8,9 @@
 }
 
 .title-questions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
     font-size: $questions-size;
     color: $bold-text-color;
@@ -18,11 +21,8 @@
     cursor: pointer;
 }
 
-.title-questions::after {
-    display: inline;
-    content: url("../images/icon-arrow-down.svg");
-    float: right;
-    transform: scale(1.5);
+.arrow-down {
+    width: 15px;
 }
 
 .title-questions:hover {
@@ -41,25 +41,30 @@
     margin-bottom: 30px;
 }
 
-.answer-2 {
-    color: $answers-color;
-    width: 95%;
-}
+// .answer-2 {
+//     color: $answers-color;
+//     width: 95%;
+// }
 
 // To add by JavaScript
 
 .active {
+    font-weight: $bold;
+}
+
+.active > .answers {
+    display: block;
+}
+
+.active img {
+    transform: rotate(180deg);
     transition: all 0.2s ease-in;
 }
 
-.active::after {
-    content: url("../images/icon-arrow-down.svg");
-    transform: rotate(-180deg) scale(1.5);
-}
-
-.show-answer {
-    display: block;
-}
+// .active::after {
+//     content: url("../images/icon-arrow-down.svg");
+//     transform: rotate(-180deg) scale(1.5);
+// }
 
 @media screen and (max-width: 900px) {
     .faq-side {
