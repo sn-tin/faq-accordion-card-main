@@ -51,10 +51,11 @@ main {
 
 @media screen and (max-width: 900px) {
   main {
-    margin: 30% auto 5%;
+    margin: 120px auto 30px;
   }
 
   .container {
+    margin: 0;
     background-image: url("/bg-pattern-mobile.0fb10e67.svg");
     background-size: 70%;
     background-position: top center;
