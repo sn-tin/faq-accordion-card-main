@@ -179,6 +179,10 @@ main {
   .faq-heading {
     text-align: center;
   }
+
+  .questions :hover {
+    color: hsl(238deg, 29%, 16%);
+  }
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */

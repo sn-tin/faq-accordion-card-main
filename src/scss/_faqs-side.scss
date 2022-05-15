@@ -75,4 +75,10 @@
     .faq-heading {
         text-align: center;
     }
+
+    .questions {
+        :hover {
+            color: $bold-text-color;
+        }
+    }
 }
