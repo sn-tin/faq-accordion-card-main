@@ -144,27 +144,23 @@ main {
   margin-top: 20px;
 }
 
-.panel {
-  display: none;
-}
-
 .answers {
+  display: none;
   color: hsl(240deg, 6%, 50%);
   width: 95%;
   margin-bottom: 30px;
 }
 
-.active {
+.active span {
   color: hsl(238deg, 29%, 16%);
   font-weight: 700;
 }
-
 .active img {
   transform: rotate(180deg);
   transition: all 0.2s ease-in;
 }
-
-.collapse-answer {
+.active p {
+  font-weight: 400;
   display: block;
 }
 

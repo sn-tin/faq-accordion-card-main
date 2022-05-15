@@ -34,11 +34,12 @@
     margin-top: 20px;
 }
 
-.panel {
-    display: none;
-}
+// span {
+//     display: none;
+// }
 
 .answers {
+    display: none;
     color: $answers-color;
     width: 95%;
     margin-bottom: 30px;
@@ -47,17 +48,18 @@
 // To add by JavaScript
 
 .active { 
-    color: $bold-text-color;
-    font-weight: $bold;
-}
-
-.active img {
-    transform: rotate(180deg);
-    transition: all 0.2s ease-in;
-}
-
-.collapse-answer {
-    display: block;
+    span {
+        color: $bold-text-color;
+        font-weight: $bold;
+    }
+    img {
+        transform: rotate(180deg);
+        transition: all 0.2s ease-in;
+    }
+    p {
+        font-weight: $regular;
+        display: block;
+    }
 }
 
 .move-box {

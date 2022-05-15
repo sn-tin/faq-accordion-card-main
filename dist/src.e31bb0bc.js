@@ -118,20 +118,25 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"index.js":[function(require,module,exports) {
-var accordionQuestions = document.querySelectorAll(".questions");
+var accordionQuestions = document.querySelectorAll(".faqs");
 var boxIllustration = document.querySelector(".box-illust");
 accordionQuestions.forEach(function (questions) {
   questions.addEventListener('click', function () {
     // accordionQuestions.forEach(itm => itm.classList.remove("active"));
-    this.classList.toggle("active");
-    var accordionAnswers = questions.nextElementSibling;
+    // this.classList.toggle("active");    
+    // if (questions.classList.contains("active")) { 
+    //     boxIllustration.classList.add("move-box")
+    // } else {
+    //     boxIllustration.classList.remove("move-box")
+    // }
+    // To show and hide answers on FAQs
+    this.classList.toggle("active"); // To hide other answers when one question is clicked
 
     if (questions.classList.contains("active")) {
-      boxIllustration.classList.add("move-box");
-      accordionAnswers.classList.toggle("collapse-answer");
-    } else {
-      boxIllustration.classList.remove("move-box");
-      accordionAnswers.classList.remove("collapse-answer");
+      accordionQuestions.forEach(function (questions) {
+        questions.classList.remove("active");
+      });
+      questions.classList.toggle("active");
     }
   });
 });
@@ -163,7 +168,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34131" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44837" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
