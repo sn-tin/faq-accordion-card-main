@@ -30,10 +30,20 @@ p {
 
 main {
   height: 100vh;
-  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  padding: 10% 5%;
+}
+
+main::before {
+  content: url("/illustration-box-desktop.77ccbcb0.svg");
+  position: relative;
+  transform: scale(1.2);
+  left: -41rem;
+  bottom: -4rem;
+  z-index: 100;
 }
 
 .container {
@@ -42,27 +52,28 @@ main {
   background-color: white;
   border-radius: 20px;
   padding: 0;
-  margin: 0 100px;
-  background-image: url("/bg-pattern-desktop.2f784f63.svg");
-  background-repeat: no-repeat;
-  background-size: 80rem;
-  background-position: -50rem -25rem;
+  position: absolute;
+  overflow: hidden;
 }
 
-@media screen and (max-width: 900px) {
-  main {
-    margin: 120px auto 30px;
+.container::before {
+  content: url("/bg-pattern-desktop.2f784f63.svg");
+  position: absolute;
+  transform: scale(1.3);
+  left: -35rem;
+}
+
+@media screen and (max-width: 1411px) {
+  .container::before {
+    transform: scale(1);
   }
 
-  .container {
-    margin: 0;
-    background-image: url("/bg-pattern-mobile.0fb10e67.svg");
-    background-size: 70%;
-    background-position: top center;
-    transform: scale(0.9);
+  main::before {
+    content: "";
   }
 }
 .image-side {
+  width: 100%;
   position: relative;
 }
 
@@ -76,40 +87,13 @@ main {
   align-items: center;
   position: relative;
   left: -7rem;
-  width: 38rem;
-}
-
-.box-illust {
-  width: 14rem;
-  position: absolute;
-  top: 11.5rem;
-  left: -7rem;
+  width: 100%;
 }
 
 .mobile-img {
   display: none;
 }
 
-@media screen and (max-width: 900px) {
-  .desktop-img, .desktop-illust, .box-illust {
-    display: none;
-    position: static;
-  }
-
-  .image-side {
-    width: 100%;
-  }
-
-  .mobile-img {
-    display: block;
-    width: 70%;
-    margin: 0 auto;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -60%);
-  }
-}
 .faq-side {
   width: 100%;
   padding: 100px 100px 100px 0;
@@ -164,25 +148,6 @@ main {
 .active p {
   font-weight: 400;
   display: block;
-}
-
-.move-box {
-  left: -10rem;
-}
-
-@media screen and (max-width: 900px) {
-  .faq-side {
-    padding: 25px 25px 50px;
-    margin-top: 120px;
-  }
-
-  .faq-heading {
-    text-align: center;
-  }
-
-  .questions :hover {
-    color: hsl(238deg, 29%, 16%);
-  }
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */
