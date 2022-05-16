@@ -58,29 +58,19 @@
     }
 }
 
-// @media screen and (max-width: 1024px) {
-//     .faq-side {
-//         padding: 50px 50px;
-//         margin-top: 0;
-//     }
-//     .faq-heading {
-//         text-align: center;
-//     }
-// }
+@media screen and (max-width: 991px) {
+    .faq-side {
+        padding: 25px 25px 50px;
+        margin-top: 120px;
+    }
 
-// @media screen and (max-width: 900px) {
-//     .faq-side {
-//         padding: 25px 25px 50px;
-//         margin-top: 120px;
-//     }
+    .faq-heading {
+        text-align: center;
+    }
 
-//     .faq-heading {
-//         text-align: center;
-//     }
-
-//     .questions {
-//         :hover {
-//             color: $bold-text-color;
-//         }
-//     }
-// }
+    .questions {
+        :hover {
+            color: $bold-text-color;
+        }
+    }
+}

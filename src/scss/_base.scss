@@ -32,22 +32,19 @@ main {
     align-items: center;
     justify-content: center;
     position: relative;
-    padding: 10% 5%;
+    margin: 10%;
 }
 
 main::before {
     content: url("../images/illustration-box-desktop.svg");
     position: relative;
     transform: scale(1.2);
-    // left: 10.3rem;
-    // bottom: 21rem;
     left: -41rem;
     bottom: -4rem;
     z-index: 100;
 }
 
 .container {
-    // margin: 20% 30%;
     align-items: center;
     justify-content: center;
     background-color: white;
@@ -65,6 +62,9 @@ main::before {
 }
 
 @media screen and (max-width: 1411px) {
+    main {
+        margin-top: 0;
+    }
     .container::before {
         transform: scale(1);
     }
@@ -73,17 +73,32 @@ main::before {
     }
 }
 
+@media screen and (max-width: 991px) {
+    main {
+        margin-top: 30%;
+    }
 
-// @media screen and (max-width: 900px) {
-//     main {
-//         margin: 120px auto 30px;
-//     }
+    .container {
+        margin: 0;
+        background-image: url("../images/bg-pattern-mobile.svg");
+        background-size: 70%; 
+        background-position: top center;
+        background-repeat: no-repeat;
+        position: absolute;
+        overflow: visible;
+    }
+    
+    .container::before {
+        content: '';
+    }
+}
 
-//     .container {
-//         margin: 0;
-//         background-image: url("../images/bg-pattern-mobile.svg");
-//         background-size: 70%; 
-//         background-position: top center;
-//         transform: scale(0.9);
-//     }
-// }
+@media screen and (max-width: 400px) {
+    main {
+        margin: 85px 10px 30px;
+    }
+
+    .container {
+        transform: scale(0.9);
+    }
+}

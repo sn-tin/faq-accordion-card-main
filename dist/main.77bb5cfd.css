@@ -15,17 +15,17 @@ body {
 }
 
 h1 {
-  font-size: clamp(2.8rem, 2.5vw, 3rem);
+  font-size: clamp(2.6rem, 2.5vw, 3rem);
   font-weight: 700;
 }
 
 h2 {
-  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  font-size: clamp(0.9rem, 2.5vw, 1.4rem);
   margin: 0;
 }
 
 p {
-  font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+  font-size: clamp(0.8rem, 2.5vw, 1.2rem);
 }
 
 main {
@@ -34,7 +34,7 @@ main {
   align-items: center;
   justify-content: center;
   position: relative;
-  padding: 10% 5%;
+  margin: 10%;
 }
 
 main::before {
@@ -64,12 +64,44 @@ main::before {
 }
 
 @media screen and (max-width: 1411px) {
+  main {
+    margin-top: 0;
+  }
+
   .container::before {
     transform: scale(1);
   }
 
   main::before {
     content: "";
+  }
+}
+@media screen and (max-width: 991px) {
+  main {
+    margin-top: 30%;
+  }
+
+  .container {
+    margin: 0;
+    background-image: url("/bg-pattern-mobile.0fb10e67.svg");
+    background-size: 70%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    position: absolute;
+    overflow: visible;
+  }
+
+  .container::before {
+    content: "";
+  }
+}
+@media screen and (max-width: 400px) {
+  main {
+    margin: 85px 10px 30px;
+  }
+
+  .container {
+    transform: scale(0.9);
   }
 }
 .image-side {
@@ -94,6 +126,25 @@ main::before {
   display: none;
 }
 
+@media screen and (max-width: 991px) {
+  .desktop-img, .desktop-illust, .box-illust {
+    display: none;
+  }
+
+  .image-side {
+    width: 70%;
+  }
+
+  .mobile-img {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -60%);
+  }
+}
 .faq-side {
   width: 100%;
   padding: 100px 100px 100px 0;
@@ -108,7 +159,7 @@ main::before {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  font-size: clamp(0.9rem, 2.5vw, 1.4rem);
   color: hsl(238deg, 29%, 16%);
   border: 0;
   background-color: transparent;
@@ -148,6 +199,21 @@ main::before {
 .active p {
   font-weight: 400;
   display: block;
+}
+
+@media screen and (max-width: 991px) {
+  .faq-side {
+    padding: 25px 25px 50px;
+    margin-top: 120px;
+  }
+
+  .faq-heading {
+    text-align: center;
+  }
+
+  .questions :hover {
+    color: hsl(238deg, 29%, 16%);
+  }
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */

@@ -20,32 +20,24 @@
     display: none;
 }
 
-// @media screen and (max-width: 1024px) {
-//     .desktop-img, .desktop-illust, .box-illust {
-//                 display: none;
-//                 position: static;
-//             }
-// }
+@media screen and (max-width: 991px) {
 
-// @media screen and (max-width: 900px) {
+    .desktop-img, .desktop-illust, .box-illust {
+        display: none;
+    }
 
-//     .desktop-img, .desktop-illust, .box-illust {
-//         display: none;
-//         position: static;
-//     }
+    .image-side {
+        width: 70%;
+    }
 
-//     .image-side {
-//         width: 100%;
-//     }
+    .mobile-img {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -60%);
+    }
 
-//     .mobile-img {
-//         display: block;
-//         width: 70%;
-//         margin: 0 auto;
-//         position: absolute;
-//         left: 50%;
-//         top: 50%;
-//         transform: translate(-50%, -60%);
-//     }
-
-// }
+}
