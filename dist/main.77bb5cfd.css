@@ -37,6 +37,7 @@ main {
 }
 
 .container {
+  height: 70%;
   align-items: center;
   justify-content: center;
   background-color: white;
@@ -45,7 +46,7 @@ main {
   margin: 0 100px;
   background-image: url("/bg-pattern-desktop.2f784f63.svg");
   background-repeat: no-repeat;
-  background-size: 80rem;
+  background-size: 100%;
   background-position: -50rem -25rem;
 }
 
