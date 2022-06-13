@@ -34,7 +34,6 @@ main {
   align-items: center;
   justify-content: center;
   position: relative;
-  margin: 10%;
 }
 
 main::before {
